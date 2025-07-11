@@ -148,7 +148,7 @@ pipeline {
         always {
             // The 'cleanWs()' step requires a 'FilePath' context, which is provided by a 'node' block.
             // This ensures the workspace is cleaned up on the agent.
-            node ('jenkins'){ 
+            node ('Jenkins'){ 
                 script {
                     try {
                         cleanWs() // Clean up the workspace after the build

@@ -2,6 +2,10 @@ provider "aws" {
   region = var.aws_region
 }
 
+# data.tf (or main.tf)
+data "aws_availability_zones" "available" {
+  state = "available"
+}
 
 data "aws_eks_cluster" "cluster" {
   name = module.eks_cluster.cluster_name
